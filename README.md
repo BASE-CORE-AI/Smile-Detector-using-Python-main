@@ -13,7 +13,8 @@ appz - ad hoc applications useful for extending of SMILEsample and smileDetector
 1. then open command prompt outside the vs code and type ".\Scripts\activate"
 2. Install the requirements file "pip install -r requirements.txt"
 3. Run "python train_model.py -d SMILEs -m model.h5"
-4. Then Run "python detect_smile.py -c haarcascade_frontalface_default.xml -m model.h5"
+4. change mqtt broker address(check your ip with "ipconfig" in cmd)
+5. Open src folder "cd src" Then Run "python detect_smile.py -c haarcascade_frontalface_default.xml -m model.h5"
 
 ## Tips
 1. To automatically generate requirements.txt "python -m  pipreqs.pipreqs [path/to/project]"

@@ -10,8 +10,8 @@ import paho.mqtt.client as mqtt
 
 
 # MQTT broker details
-broker_address = "192.168.137.1"  # Replace with your MQTT broker's address
-port = 1883  # Default MQTT port
+broker_address = "192.168.0.131"  #Replace with your MQTT broker's address
+port = 1883  #Default MQTT port
 
 def publish_to_topic(topic, value):
     client.publish(topic, value)
@@ -56,6 +56,7 @@ model = load_model(args['model'])
 # if a video path was not supplied, grab the refrences to the webcam
 if not args.get('video', False):
     print('[INFO] starting video capture...')
+    # camera = cv2.VideoCapture("rtmp://10.24.150.155:1935/TEST/")
     camera = cv2.VideoCapture(0)
 
 # otherwise, load the video
